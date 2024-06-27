@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body {
+    background: #e0e2ec61;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;               /* ширина scrollbar */
+  }
+  body::-webkit-scrollbar-track {
+    background: #e0e2ec61;        /* цвет дорожки */
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: #a5a0a0;    /* цвет плашки */
+    border-radius: 20px;       /* закругления плашки */
+    border: 3px solid #a5a0a0;  /* padding вокруг плашки */
+  }

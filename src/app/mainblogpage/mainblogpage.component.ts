@@ -1,34 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterModule, RouterOutlet } from '@angular/router';
-import { NavlinkComponent } from './navlink/navlink.component';
-import { MainblogComponent } from './mainblog/mainblog.component';
-import { AuthorinfoComponent } from './authorinfo/authorinfo.component';
-import { HttpClient } from '@angular/common/http';
-import { AppService } from './app.service';
-import { LoginService } from './login/login.service';
-import { Post, User } from './mainblogpage/mainblogpage.interface';
-import { NavlinkService } from './navlink.service';
-import { MatIconModule } from '@angular/material/icon';
+import { NavlinkComponent } from '../navlink/navlink.component';
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { NavlinkService } from '../navlink.service';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { HttpClient } from '@angular/common/http';
+import { Post, User } from './mainblogpage.interface';
+import { AppService } from '../app.service';
+import { LoginService } from '../login/login.service';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-mainblogpage',
   standalone: true,
   imports: [
-    RouterOutlet,
     NavlinkComponent,
-    MainblogComponent,
-    AuthorinfoComponent,
-    MatIconModule,
     RouterModule,
-    CommonModule
+    CommonModule,
+    MatButtonModule,
+    MatIconModule,
   ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  templateUrl: './mainblogpage.component.html',
+  styleUrl: './mainblogpage.component.css',
 })
-export class AppComponent implements OnInit {
-  title = 'blog-app';
-
+export class MainblogpageComponent implements OnInit {
   posts: Post[] = [];
   users: User[] = [];
   isLoggin: boolean = false;

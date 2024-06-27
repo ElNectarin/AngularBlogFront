@@ -1,0 +1,50 @@
+<app-navlink></app-navlink>
+<div
+  style="
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  "
+>
+  <div
+    style="
+      background: #fff;
+      width: 80%;
+      height: 80%;
+      display: inline-flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 10px;
+      overflow: hidden;
+    "
+  >
+    <div style="display: flex; align-items: center; justify-content: center">
+      <h1>Lets create a post</h1>
+    </div>
+    <div style="overflow: hidden; max-width: 80%">
+      <form
+      [formGroup]="blogTextGroup"
+        (ngSubmit)="onSubmit()"
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          max-width: 100%;
+        "
+      >
+        <mat-form-field appearance="outline" style="width: 65%">
+          <mat-label for="title">Enter a title</mat-label>
+          <input matInput id="title" formControlName="title" type="text" />
+        </mat-form-field>
+        <angular-editor
+          formControlName="text"
+          [config]="config"
+        ></angular-editor>
+        <button mat-button>Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

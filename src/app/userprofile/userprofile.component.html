@@ -1,0 +1,100 @@
+<app-navlink></app-navlink>
+<div class="MainProfileWrapper">
+  <div class="UserInfoWrapper">
+    <div
+      class="imgBlock"
+      *ngIf="
+        user.profilePhoto &&
+          user.profilePhoto !== 'data:image/jpeg;base64,null';
+        else noPersonPhoto
+      "
+    >
+      <img
+        src="{{ user.profilePhoto }}"
+        alt="Noavatar"
+        width="150"
+        height="150"
+      />
+    </div>
+    <ng-template #noPersonPhoto>
+      <div class="imgBlock">
+        <img src="{{ noPhoto }}" alt="avatar" width="150" height="150" />
+      </div>
+    </ng-template>
+    <div class="NameStatusBlock">
+      <div>
+        <h1>{{ user.name }}</h1>
+      </div>
+      <p>{{ user.status }}</p>
+    </div>
+    <div class="InfoBlock">
+      <div *ngIf="user.birthDay">
+        <mat-icon>cake</mat-icon><span>{{ user.birthDay }}</span>
+      </div>
+      <div *ngIf="user.location">
+        <mat-icon>location_on</mat-icon><span>{{ user.location }}</span>
+      </div>
+      <div *ngIf="user.createdAt">
+        <mat-icon>date_range</mat-icon><span>{{ user.createdAt | date }}</span>
+      </div>
+      <div *ngIf="user.email">
+        <mat-icon>email</mat-icon><span>{{ user.email }}</span>
+      </div>
+    </div>
+    <hr width="100%" size="2" class="hrLine" />
+    <div *ngIf="user.education || user.work" class="EducationWorkInfo">
+      <div *ngIf="user.education">
+        <span class="EducationWorkSpan">Education</span>
+        <span>{{ user.education }}</span>
+      </div>
+      <div *ngIf="user.work">
+        <span class="EducationWorkSpan">Work</span>
+        <span>{{ user.work }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="ProfileSkillsBlock">
+    <div class="SkilsBlock">
+      <div class="PersonSkills">
+        <div>
+          <h1>Skills/languages</h1>
+        </div>
+        <div class="TextSkills">
+          <p>{{ user.skills }}</p>
+        </div>
+      </div>
+      <div class="CommentsInfo">
+        <div>
+          <p>{{ user.posts.length }}</p>
+          <p>posts</p>
+        </div>
+        <p>comments</p>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column-reverse; width: 70%">
+      <div *ngFor="let post of user.posts" class="mainTextItem">
+        <div class="itemAuhorBlock">
+          <img src="{{ user.profilePhoto }}" alt="img" />
+          <div class="itemAuthorInfoText">
+            <p>{{ user.userName }}</p>
+            <p>{{ post.createdAt | date : "MMM d" }}</p>
+          </div>
+        </div>
+        <div class="postTitle">
+          <p [routerLink]="['/blog', post.id]">{{ post.title }}</p>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            padding-left: 8vh;
+            padding-right: 2vh;
+          "
+        >
+          <p>add Comment</p>
+          <mat-icon>favorite</mat-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

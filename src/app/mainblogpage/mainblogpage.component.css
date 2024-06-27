@@ -1,0 +1,83 @@
+.mainBlogPageWrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.mainTextWrapper {
+  width: 60%;
+  margin: 2vh;
+}
+
+.mainTextItem {
+  background: #fff;
+  padding-top: 1vh;
+  padding-left: 1vh;
+  border-radius: 5px;
+  margin-top: 2vh;
+}
+
+.itemAuhorBlock {
+  display: flex;
+  align-items: center;
+  margin-left: 1vh;
+}
+
+.itemAuhorBlock img {
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+}
+
+.itemAuthorInfoText {
+  margin-left: 2vh;
+}
+
+.itemAuthorInfoText p {
+  font-size: 1.3vh;
+  margin: 0;
+  font-weight: 400;
+}
+
+.postTitle {
+  margin-top: 2vh;
+  padding-left: 8vh;
+}
+
+.postTitle p {
+  font-size: 4vh;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+.postTitle p:hover {
+  color: #005cbb;
+  transition: 0.2s linear;
+}
+
+.sideLoginButtons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sideLoginButtons button {
+  margin-top: 1vh;
+}
+
+.helpIcons {
+  display: flex;
+  flex-direction: column;
+  padding: 2vh;
+}
+
+.helpIcons div {
+  display: flex;
+  margin-top: 0.6vh;
+  cursor: pointer;
+}
+
+.helpIcons div p {
+  margin-left: 0.8vh;
+}

@@ -1,0 +1,34 @@
+<app-navlink></app-navlink>
+<div style="display: flex; align-items: center; justify-content: center">
+  <main style="display: flex; flex-direction: column; width: 55%">
+    <div *ngIf="post" class="mainBlogStyle">
+      <div>
+        <img src="{{ cyberPunkImg }}" alt="cyberPunkImg" class="usersImage" />
+      </div>
+      <div>
+        <h1>{{ post.title }}</h1>
+      </div>
+      <div [innerHTML]="post.text"></div>
+    </div>
+    <div style="margin-top: 5vh">
+      <form (ngSubmit)="onSubmit()" [formGroup]="commentFormGroup">
+        <div>
+          <p>Make your comment</p>
+        </div>
+        <mat-form-field appearance="outline" style="width: 100%">
+          <textarea matInput formControlName="commentText"></textarea>
+        </mat-form-field>
+        <button mat-flat-button>Отправить</button>
+      </form>
+    </div>
+    <div style="margin-top: 2vh;">
+      <div><h4>Comments ({{comments.length}})</h4></div>
+      <div *ngFor="let comment of comments" style="background: #fff; height: 5vh; padding: 2vh; margin-bottom: 2vh; border-radius: 5px;">
+        <p style="font-size: 2.5vh;">{{ comment.authorName }}</p>
+        <p>{{ comment.authorComment }}</p>
+      </div>
+    </div>
+  </main>
+
+  <app-authorinfo style="width: 20%"></app-authorinfo>
+</div>

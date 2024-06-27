@@ -1,0 +1,94 @@
+<app-navlink></app-navlink>
+<div style="position: absolute; width: 100%; top: 12vh">
+  <div style="display: flex; align-items: center; justify-content: center">
+    <h1>Settings</h1>
+  </div>
+  <form
+    style="display: flex; flex-direction: column; align-items: center"
+    [formGroup]="editFormGroup"
+    (ngSubmit)="onSubmit()"
+  >
+    <mat-form-field appearance="outline" style="width: 25%">
+      <mat-label>Name</mat-label>
+      <input
+        matInput
+        formControlName="name"
+        placeholder="name"
+        value="{{ user.name }}"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 25%">
+      <mat-label>Status</mat-label>
+      <input
+        matInput
+        formControlName="status"
+        placeholder="status"
+        value="{{ user.status }}"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 25%">
+      <mat-label>Username</mat-label>
+      <input
+        matInput
+        formControlName="username"
+        placeholder="username"
+        value="{{ user.userName }}"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 25%">
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        formControlName="email"
+        value="{{ user.email }}"
+        placeholder="email"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 25%">
+      <mat-label>Education</mat-label>
+      <input
+        matInput
+        formControlName="education"
+        value="{{ user.education }}"
+        placeholder="education"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 25%">
+      <mat-label>Birthday</mat-label>
+      <input
+        matInput
+        formControlName="birthday"
+        value="{{ user.birthDay }}"
+        placeholder="birthday"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 25%">
+      <mat-label>Location</mat-label>
+      <input
+        matInput
+        formControlName="location"
+        value="{{ user.location }}"
+        placeholder="location"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 25%">
+      <mat-label>Skills</mat-label>
+      <input
+        matInput
+        formControlName="skills"
+        value="{{ user.skills }}"
+        placeholder="skills"
+      />
+    </mat-form-field>
+    <mat-form-field appearance="outline" style="width: 25%">
+      <mat-label>Work</mat-label>
+      <input
+        matInput
+        formControlName="work"
+        value="{{ user.work }}"
+        placeholder="work"
+      />
+    </mat-form-field>
+    <button mat-flat-button>Edit</button>
+  </form>
+</div>

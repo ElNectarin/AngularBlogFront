@@ -1,0 +1,77 @@
+<div class="loginWrapper">
+  <div style="position: relative; bottom: 10vh">
+    <p class="pBlog" (click)="goToMainPage()">My Blog</p>
+  </div>
+  <div style="position: relative; bottom: 3vh">
+    <h1>Join the My Blog</h1>
+  </div>
+  <div>
+    <p>My Blog is a community of {{ users.length }} amazing people</p>
+  </div>
+  <div>
+    <form class="loginForm" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <mat-form-field
+        subscriptSizing="dynamic"
+        appearance="outline"
+        class="userEmailField"
+      >
+        <mat-label for="username">Username</mat-label>
+        <input
+          matInput
+          id="username"
+          type="text"
+          formControlName="username"
+          placeholder="JohnDoe"
+          required
+          (blur)="updateUsernameErrorMessage()"
+        />
+
+        <mat-error
+          *ngIf="
+            loginForm.get('username').invalid &&
+            loginForm.get('username').touched
+          "
+          >{{ errorMessage }}</mat-error
+        >
+      </mat-form-field>
+      <mat-form-field
+        subscriptSizing="dynamic"
+        appearance="outline"
+        class="userEmailField"
+      >
+        <mat-label for="password">Password</mat-label>
+        <input
+          matInput
+          id="password"
+          [type]="hide ? 'password' : 'text'"
+          formControlName="password"
+          required
+          (blur)="updatePasswordErrorMessage()"
+        />
+        <mat-error
+          *ngIf="
+            loginForm.get('password').invalid &&
+            loginForm.get('password').touched
+          "
+          >{{ errorMessage }}</mat-error
+        >
+        <button
+          mat-icon-button
+          matSuffix
+          type="button"
+          (click)="clickEvent($event)"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+      </mat-form-field>
+      <button mat-flat-button class="loginButton" type="submit">Log In</button>
+    </form>
+  </div>
+  <hr width="30%" size="2" class="hrLine" />
+  <div style="display: flex; align-items: center">
+    <p style="margin: 0">New to My Blog?</p>
+    <button mat-button (click)="goToRegisterPaige()">Create account</button>
+  </div>
+</div>

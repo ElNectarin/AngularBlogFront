@@ -1,0 +1,175 @@
+.MainProfileWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 20%;
+  padding-bottom: 5vh;
+}
+
+.UserInfoWrapper {
+  height: 50%;
+  width: 60%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: #fff;
+}
+
+.imgBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  bottom: 5vh;
+  background: #F3F3F7;
+  width: 20%;
+  height: 40%;
+  border-radius: 20%;
+}
+
+.imgBlock img {
+  border-radius: 20%;
+}
+
+.NameStatusBlock {
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.NameStatusBlock div h1 {
+  font-size: 3.5vh;
+}
+
+.InfoBlock {
+  justify-content: space-around;
+  display: flex;
+  width: 80%;
+}
+
+.InfoBlock div {
+  align-items: center;
+  display: flex;
+}
+
+.EducationWorkInfo {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  height: 30%;
+  align-items: center;
+}
+
+.EducationWorkInfo div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.EducationWorkSpan {
+  font-size: 1.3vh;
+}
+
+.hrLine {
+  margin-top: 3vh;
+  opacity: 0.1;
+}
+
+.mainTextItem {
+  background: #fff;
+  padding-top: 1vh;
+  padding-left: 1vh;
+  border-radius: 5px;
+  margin-top: 1vh;
+
+}
+
+.itemAuhorBlock {
+  display: flex;
+  align-items: center;
+  margin-left: 1vh;
+}
+
+.itemAuhorBlock img {
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+}
+
+.itemAuthorInfoText {
+  margin-left: 2vh;
+}
+
+.itemAuthorInfoText p {
+    font-size: 1.3vh; 
+    margin: 0;
+    font-weight: 400;
+}
+
+.postTitle {
+  margin-top: 2vh;
+  padding-left: 8vh;
+}
+
+.postTitle p {
+    font-size: 4vh; 
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+.postTitle p:hover {
+    color: #005cbb;
+    transition: 0.2s linear;
+}
+
+.ProfileSkillsBlock {
+  display: flex;
+  width: 60%;
+}
+
+.SkilsBlock {
+  width: 30%;
+}
+
+.PersonSkills {
+  background: #fff;
+  margin-top: 1vh;
+  margin-right: 1vh;
+  border-radius: 5px;
+}
+
+.PersonSkills div h1 {
+  font-size: 2vh;
+  padding-left: 1vh;
+}
+
+.TextSkills {
+  padding-bottom: 1vh;
+  padding-left: 1vh;
+}
+
+.CommentsInfo {
+  background: #fff;
+  margin-top: 1vh;
+  margin-right: 1vh;
+  border-radius: 5px;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.CommentsInfo div {
+  display: flex;
+}
+
+.CommentsInfo p {
+  padding-left: 1vh;
+}

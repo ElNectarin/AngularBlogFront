@@ -1,0 +1,81 @@
+.mainRegistrationContent {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registrationWrapper {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.attributeList {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.myform-wrapper {
+  margin: 50px;
+  width: 350px;
+
+  .mat-form-field {
+    width: 100%;
+  }
+
+  .mat-toolbar-single-row {
+    height: auto !important;
+    background: transparent;
+
+    button {
+      width: 30%;
+    }
+  }
+}
+
+#fileUpload {
+  position: absolute;
+  z-index: 9;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  cursor: pointer;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.userEmailField {
+  width: 50vh;
+  margin-top: 3vh;
+}
+
+.loginButton {
+  margin-top: 3vh;
+}
+
+.hrLine {
+  margin-top: 3vh;
+}
+
+.file-input {
+  display: none;
+}
