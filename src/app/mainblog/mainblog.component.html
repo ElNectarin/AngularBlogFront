@@ -21,11 +21,33 @@
         <button mat-flat-button>Отправить</button>
       </form>
     </div>
-    <div style="margin-top: 2vh;">
-      <div><h4>Comments ({{comments.length}})</h4></div>
-      <div *ngFor="let comment of comments" style="background: #fff; height: 5vh; padding: 2vh; margin-bottom: 2vh; border-radius: 5px;">
-        <p style="font-size: 2.5vh;">{{ comment.authorName }}</p>
-        <p>{{ comment.authorComment }}</p>
+    <div style="margin-top: 2vh">
+      <div>
+        <h4>Comments ({{ comments.length }})</h4>
+      </div>
+      <div
+        *ngFor="let comment of comments"
+        style="
+          background: #fff;
+          height: 5vh;
+          padding: 2vh;
+          margin-bottom: 2vh;
+          border-radius: 5px;
+        "
+      >
+        <div style="display: flex; flex-direction: column">
+          <div
+            style="display: flex; align-items: center; justify-items: center"
+          >
+            <p style="font-size: 1.5vh; font-weight: 300">
+              {{ comment.authorName }}
+            </p>
+            <p style="font-size: 1.5vh; font-weight: 100; margin-left: 1vh">
+              {{ comment.createdAt | date : "MMM d" }}
+            </p>
+          </div>
+          <p>{{ comment.authorComment }}</p>
+        </div>
       </div>
     </div>
   </main>

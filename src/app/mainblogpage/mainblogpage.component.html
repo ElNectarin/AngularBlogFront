@@ -78,7 +78,16 @@
           padding-right: 2vh;
         "
       >
-        <p>add Comment</p>
+        <div *ngIf="post.comments.length <= 0">
+          <p style="cursor: pointer" [routerLink]="['/blog', post.id]">
+            add Comment
+          </p>
+        </div>
+        <div *ngIf="post.comments.length > 0">
+          <p style="cursor: pointer" [routerLink]="['/blog', post.id]">
+            {{ post.comments.length }} comments
+          </p>
+        </div>
         <mat-icon>favorite</mat-icon>
       </div>
     </div>

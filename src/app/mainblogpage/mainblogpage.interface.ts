@@ -28,7 +28,9 @@ export interface User {
 }
 
 export interface Comment {
+length: any;
   id: number;
+  createdAt: string;
   authorName: string;
   authorComment: string;
   postId: number;

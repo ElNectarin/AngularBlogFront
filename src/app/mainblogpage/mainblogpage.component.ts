@@ -38,7 +38,7 @@ export class MainblogpageComponent implements OnInit {
     try {
       this.appService.getAllPosts().subscribe((data) => {
         this.posts = data;
-        this.posts.forEach((post) => {
+        this.posts.forEach((post: Post) => {
           post.user.profilePhoto =
             'data:image/jpeg;base64,' + post.user.profilePhoto;
         });
